@@ -6,7 +6,9 @@ import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceBuilder;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
@@ -17,6 +19,8 @@ import com.sample.servicename.repository.SampleMapper;
 import com.sample.servicename.repository.SampleRepository;
 
 @Configuration
+@ComponentScan(basePackages = "com.sample")
+@EnableConfigurationProperties({DatabaseConnectionProperties.class})
 public class SampleConfiguration {
 
   private static final String PATTERN_CHECK = " ?nullNamePatternMatchesAll=true";

@@ -6,7 +6,7 @@ public class Sample {
 
   private int sample_id;
   private String description;
-  private Date created_date;
+  private Date createdDate;
 
   public int getSample_id() {
     return sample_id;
@@ -24,11 +24,11 @@ public class Sample {
     this.description = description;
   }
 
-  public Date getCreated_date() {
-    return created_date;
+  public Date getCreatedDate() {
+    return createdDate;
   }
 
-  public void setCreated_date(Date created_date) {
-    this.created_date = created_date;
+  public void setCreatedDate(Date createdDate) {
+    this.createdDate = createdDate;
   }
 }

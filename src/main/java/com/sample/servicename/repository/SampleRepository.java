@@ -9,7 +9,7 @@ public class SampleRepository {
   }
 
   public void save(Sample token) {
-    sampleMapper.save(token.getDescription(), token.getCreated_date());
+    sampleMapper.save(token.getDescription(), token.getCreatedDate());
   }
 
   public Sample getById(int sampleId) {

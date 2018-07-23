@@ -10,5 +10,6 @@ public class Jersey extends ResourceConfig {
 
   public Jersey() {
     register(SampleResource.class);
+    register(JacksonContextResolver.class);
   }
 }

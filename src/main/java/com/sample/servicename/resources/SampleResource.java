@@ -27,7 +27,7 @@ public class SampleResource {
   public void createSample() {
     Sample sample = new Sample();
     Date createdDate = Date.from(ZonedDateTime.now(ZoneOffset.UTC).toInstant());
-    sample.setCreated_date(createdDate);
+    sample.setCreatedDate(createdDate);
     sample.setDescription("desc");
     sampleRepository.save(sample);
   }
